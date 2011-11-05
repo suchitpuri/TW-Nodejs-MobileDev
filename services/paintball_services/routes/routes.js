@@ -10,15 +10,8 @@ module.exports = function(app){
     app.get('/shoot', function(request, response) {
 
       response.contentType('application/json');
-
-      var people = [
-        { name: 'Dave', location: 'Atlanta' },
-        { name: 'Santa Claus', location: 'North Pole' },
-        { name: 'Man in the Moon', location: 'The Moon' }
-      ];
-
-      var peopleJSON = JSON.stringify(people);
-      response.send(peopleJSON);
+      player = require('../model/player');
+      response.send(player.shoot());
     });
 
 
