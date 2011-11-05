@@ -1,6 +1,6 @@
 module.exports = function(app){
 
-  app.namespace('/virtualpaintball', function(){
+  app.namespace('/virtualpaintball/player/:id', function(){
     app.get('/', function(req, res){
       res.render('index', {
         title: 'Express'
@@ -10,8 +10,8 @@ module.exports = function(app){
     app.get('/shoot', function(request, response) {
 
       response.contentType('application/json');
-      player = require('../models/player');
-      response.send(player.shoot());
+      playerController = require('../controllers/player_controller');
+      response.send(playerController.shoot());
     });
 
 

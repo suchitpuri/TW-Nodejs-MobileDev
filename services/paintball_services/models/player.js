@@ -1,7 +1,7 @@
   var peopleKilled = [
-    { name: 'Dave', location: 'Atlanta' },
-    { name: 'Santa Claus', location: 'North Pole' },
-    { name: 'Man in the Moon', location: 'The Moon' }
+    { name: 'Suchit', location: 'gurgaon' },
+    { name: 'Atul', location: 'sao polo' },
+    { name: 'Vineet', location: 'london' }
   ];
 
   exports.shoot = function(){
