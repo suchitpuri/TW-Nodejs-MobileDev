@@ -8,10 +8,10 @@ module.exports = function(app){
     });
 
     app.get('/shoot', function(request, response) {
-
       response.contentType('application/json');
-      playerController = require('../controllers/player_controller');
-      response.send(playerController.shoot());
+      playerControllerModule = require('../controllers/player_controller');
+      var playerController = new playerControllerModule.PlayerController();
+      response.send(playerController.shoot(request,response));
     });
 
 
