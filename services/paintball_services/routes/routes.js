@@ -10,7 +10,7 @@ module.exports = function(app){
     app.get('/shoot', function(request, response) {
 
       response.contentType('application/json');
-      player = require('../model/player');
+      player = require('../models/player');
       response.send(player.shoot());
     });
 
