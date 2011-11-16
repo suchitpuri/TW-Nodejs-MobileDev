@@ -36,6 +36,19 @@ require('express-namespace')
 
 require('./routes/routes.js')(app);
 
+var Sequelize = require("sequelize")
+var sequelize =new Sequelize('fastestfingerfirst', 'root', 'password', {
+
+  port: 3306,
+
+  logging: false,
+
+  maxConcurrentQueries: 100,
+
+  define: { timestamps: false },
+
+  sync: { force: true }
+})
 
 
 app.listen(3000);

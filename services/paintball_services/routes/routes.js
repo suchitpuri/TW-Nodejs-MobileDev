@@ -13,6 +13,13 @@ module.exports = function(app){
       var playerController = new playerControllerModule.PlayerController();
       response.send(playerController.shoot(request,response));
     });
+    
+    app.get('/question', function(request, response) {
+      response.contentType('application/json');
+      playerControllerModule = require('../controllers/player_controller');
+      var playerController = new playerControllerModule.PlayerController();
+      response.send(playerController.question(request,response));
+    });
 
 
   });
